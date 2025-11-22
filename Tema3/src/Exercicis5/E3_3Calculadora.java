@@ -1,0 +1,41 @@
+package Exercicis5;
+import java.util.Scanner;
+public class E3_3Calculadora {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introdueix un nombre: ");
+        if (!sc.hasNextDouble()) {
+            System.out.println("Has d'introduir un nombre");
+            return;
+        }
+        double n1=sc.nextDouble();
+        System.out.println("Un altre: ");
+        if (!sc.hasNextDouble()) {
+            System.out.println("Has d'introduir un nombre");
+            return;
+        }
+        double n2=sc.nextDouble();
+        System.out.println("Ara, sel·lecciona una de les opcions: \n-----------------------------------------\n+) Suma\n-) Resta\n*)Multiplicació\n/) Divisió\n%) Mòdul\n-----------------------------------------\nResposta: ");
+        char operacio = sc.next().charAt(0);
+
+        double resultat;
+        if (operacio == '+') {
+            resultat = n1 + n2;
+            System.out.println(n1 + " + " + n2 + " = " + resultat);
+        } else if (operacio == '-') {
+            resultat = n1 - n2;
+            System.out.println(n1 + " - " + n2 + " = " + resultat);
+        } else if (operacio == '*') {
+            resultat = n1 * n2;
+            System.out.println(n1 + " * " + n2 + " = " + resultat);
+        } else if (operacio == '/') {
+            resultat = n1 / n2;
+            System.out.println(n1 + " / " + n2 + " = " + resultat);
+        } else if (operacio == '%') {
+            resultat = n1 % n2;
+            System.out.println(n1 + " % " + n2 + " = " + resultat);
+        } else {
+            System.out.println("Operació no vàlida");
+        }
+    }
+}
